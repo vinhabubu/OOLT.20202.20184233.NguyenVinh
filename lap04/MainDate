@@ -1,0 +1,26 @@
+public class MainDate {
+    public static void main(String[] args) {
+    MyDate new_date = new MyDate();
+
+
+
+        new_date = new MyDate(20, 11, 2000);
+        new_date = new MyDate("20/11/2000");
+        new_date = new MyDate("20-11-2000");
+        new_date = new MyDate("10.8.1999");
+        new_date = new MyDate("15 3 2020");
+        new_date = new MyDate("9 Mar 2000");
+        new_date = new MyDate("16102007");
+        new_date = new MyDate("November 19, 2006");
+        new_date = new MyDate("23 Mar, 2000");
+ 
+        new_date.accept("28/2/2000");
+        new_date.accept("14.2.2000");
+        new_date = new MyDate("fifth", "September", "twenty twenty-six");
+        new_date.print();
+
+        MyDate date1 = new MyDate(15, 6, 2006);
+        MyDate date2 = new MyDate(28, 1, 2010);
+        System.out.println(DateUtils.CompareDate(date1, date2));
+    }
+}
