@@ -1,4 +1,4 @@
-public class TestParameter {
+public class TestParametter {
     public static void main(String[] args) {
         DigitalVideoDisc jungleDVD = new DigitalVideoDisc("jungle");
         DigitalVideoDisc ciderellaDVD = new DigitalVideoDisc("cinderella");
