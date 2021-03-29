@@ -1,0 +1,27 @@
+public class TestParameter {
+    public static void main(String[] args) {
+        DigitalVideoDisc jungleDVD = new DigitalVideoDisc("jungle");
+        DigitalVideoDisc ciderellaDVD = new DigitalVideoDisc("cinderella");
+
+
+        swap(jungleDVD, jungleDVD);
+        System.out.println("jungle dvd title: " + jungleDVD.getTitle());
+        System.out.println("cinderella dvd title " + ciderellaDVD.getTitle());
+
+        changeTitle(jungleDVD, jungleDVD.getTitle());
+        System.out.println("jungle dvd title: " + jungleDVD.getTitle());
+        
+    }
+
+    public static void swap(Object oj1, Object oj2) {
+        Object tmp = oj1;
+        oj1 = oj2;
+        oj2 = tmp;
+    }
+
+    public static void changeTitle(DigitalVideoDisc dvd, String title) {
+        String oldTitle = dvd.getTitle();
+        dvd.setTitle(title);
+        dvd = new DigitalVideoDisc(oldTitle);
+    }
+}
