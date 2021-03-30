@@ -38,7 +38,7 @@ public class Order {
             System.out.println("The disc has been added");
         }
         else
-            System.out.println("The order is almost full");
+            System.out.println("The order is full");
     }
 
     public void addDigitalVideoDisc(DigitalVideoDisc[] dvdList) {
