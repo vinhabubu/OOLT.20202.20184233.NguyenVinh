@@ -14,7 +14,7 @@ public class Order {
             itemsOrdered = new DigitalVideoDisc[MAX_NUMBER_ORDERED];
         }
         else {
-            System.out.println("Number of orders reached max ");
+            System.out.println("Number of orders is max ");
         }
     }
 
