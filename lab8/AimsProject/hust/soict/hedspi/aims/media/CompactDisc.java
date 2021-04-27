@@ -4,11 +4,7 @@ import java.util.ArrayList;
 
 public class CompactDisc extends Disc implements Introable{
 
-    @Override
-    public void intro() {
-        // TODO Auto-generated method stub
-        
-    }
+    
     private ArrayList<Tract> tracts = new ArrayList<Tract>();
     private ArrayList<Tract> tracts2;
     public ArrayList<Tract> getTracts() {
@@ -36,7 +32,7 @@ public class CompactDisc extends Disc implements Introable{
 	}
 
     public CompactDisc(String title, String category, String string,String string2 ) {
-		super();
+		super( length, string2, length, string2, string2, cost);
 		tracts2 = tracts;
         this.tracts = tracts2;
 	}
@@ -47,8 +43,28 @@ public class CompactDisc extends Disc implements Introable{
 		
 	}
 
+	@Override
+    public void show() {
+        System.out.println("The DVD is  " + this.getID() + " " + this.getTitle() + " " + 
+		this.getCategory() + " " + this.getCost() 
+        + "  " + this.getDirector() + " " + this.getLength() + " " + this.getCost());
 
+		
 
 
     
 }
+    public void setArtist(String nextLine) {
+    }
+    public void addTract(Tract track) {
+    }
+    public void play() {
+    }
+	@Override
+	public void intro() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
+
