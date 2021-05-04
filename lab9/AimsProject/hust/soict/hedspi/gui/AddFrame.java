@@ -1,14 +1,28 @@
+package hust.soict.hedspi.aims.gui;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.hocjava.JavaSwing;
+
 
 /**
  *
  * @author Admin
  */
+import java.awt.Dimension;
+import java.awt.Frame;
+import java.awt.List;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 public class AddFrame extends javax.swing.JFrame {
 
     /**
