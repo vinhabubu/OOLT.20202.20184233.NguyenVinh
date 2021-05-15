@@ -1,14 +1,28 @@
+package hust.soict.hedspi.aims.gui;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.hocjava.JavaSwing;
+
 
 /**
  *
  * @author Admin
  */
+import java.awt.Dimension;
+import java.awt.Frame;
+import java.awt.List;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 public class AddFrame extends javax.swing.JFrame {
 
     /**
@@ -167,6 +181,26 @@ public class AddFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
          new Aims().setVisible(true);
         this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+private void AddButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+         bookDialog.setVisible(false);
+				try {
+					bookDialog.isEmpty();
+					float costBook = bookDialog.getCost();
+					int idBook = bookDialog.getId();
+					String[] authors = authorField.getText().split(",");
+					ArrayList<String> listAuthors = new ArrayList<String>();
+					for(String author: authors) {
+						listAuthors.add(author);
+					}
+					Book book = new Book(idBook, bookDialog.getTitle(), bookDialog.getCategory(), costBook, listAuthors);
+					order.addMedia(book);
+					JOptionPane.showMessageDialog(null, "Add successfully", "Book", JOptionPane.INFORMATION_MESSAGE);
+				} catch (Exception inputBook) {
+					JOptionPane.showMessageDialog(null, inputBook.getMessage(), "Warning", JOptionPane.WARNING_MESSAGE);
+				}
+			}
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
